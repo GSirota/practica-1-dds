@@ -10,7 +10,7 @@ public class Inscripcion {
         this.alumno = alumno;
     }
 
-    protected boolean aprobada(){
-        return materias.stream().allMatch(materia -> materia.puedeCursar(alumno));
+    protected boolean aprobada(List<Materia> materiasIncripcion, Alumno alumno){
+        return materias.stream().allMatch(materia -> materia.puedeCursar(this.alumno));
     }
 }

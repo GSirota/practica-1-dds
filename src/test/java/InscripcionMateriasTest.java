@@ -16,10 +16,9 @@ public class InscripcionMateriasTest {
         List<Materia>  materiasAprobadas =  List.of(algoritmos);
 
         alumno = new Alumno(1234,materiasAprobadas);
-
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        Assert.assertTrue(inscripcion.aprobada());
+        Assert.assertTrue(inscripcion.aprobada(materiasIncripcion, alumno));
 
     }
     
@@ -30,10 +29,9 @@ public class InscripcionMateriasTest {
         List<Materia>  materiasAprobadas = List.of(am);
 
         alumno = new Alumno(1234, materiasAprobadas);
-
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        Assert.assertFalse( inscripcion.aprobada());
+        Assert.assertFalse(inscripcion.aprobada(materiasIncripcion, alumno));
 
     }
 
