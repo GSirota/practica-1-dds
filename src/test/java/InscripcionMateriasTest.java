@@ -5,10 +5,8 @@ import java.util.List;
 
 public class InscripcionMateriasTest {
     Alumno alumno ;
-
     Materia algoritmos = new Materia("Algoritmos y Estructura de Datos");
     Materia pdep = new Materia("Paradigmas de Programacion", List.of(algoritmos));
-
     Materia am = new Materia("Matematica");
 
     @Test
@@ -24,6 +22,7 @@ public class InscripcionMateriasTest {
         Assert.assertTrue(inscripcion.aprobada());
 
     }
+    
     @Test
     public void materiasConCorrelativasNoAprobadas(){
 
