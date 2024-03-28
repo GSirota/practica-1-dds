@@ -4,7 +4,6 @@ import org.junit.Test;
 import java.util.List;
 
 public class InscripcionMateriasTest {
-    Alumno alumno ;
     Materia algoritmos = new Materia("Algoritmos y Estructura de Datos");
     Materia pdep = new Materia("Paradigmas de Programacion", List.of(algoritmos));
     Materia am = new Materia("Matematica");
@@ -15,7 +14,7 @@ public class InscripcionMateriasTest {
         List<Materia>  materiasIncripcion = List.of(pdep);
         List<Materia>  materiasAprobadas =  List.of(algoritmos);
 
-        alumno = new Alumno(1234,materiasAprobadas);
+        Alumno alumno = new Alumno(1234,materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
         Assert.assertTrue(inscripcion.aprobada(materiasIncripcion, alumno));
@@ -28,7 +27,7 @@ public class InscripcionMateriasTest {
         List<Materia>  materiasIncripcion = List.of(pdep);
         List<Materia>  materiasAprobadas = List.of(am);
 
-        alumno = new Alumno(1234, materiasAprobadas);
+        Alumno alumno = new Alumno(1234, materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
         Assert.assertFalse(inscripcion.aprobada(materiasIncripcion, alumno));
