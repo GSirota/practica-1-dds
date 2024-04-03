@@ -2,4 +2,5 @@
 
 [Diagrama de clases](https://drive.google.com/file/d/13J461JYnFnI95z0Pt0NdpW1UXK_Za2z3/view?usp=drive_link)
 
-![image](https://github.com/GSirota/practica-1-dds/assets/83833932/a039d83a-438b-4660-bded-3e410424b41e)
+
+![image](https://github.com/GSirota/practica-1-dds/assets/83833932/f4db0a0a-a152-4f37-87f3-decb6a5a6ae4)
