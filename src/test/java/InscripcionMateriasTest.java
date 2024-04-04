@@ -1,7 +1,10 @@
-import org.junit.Assert;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InscripcionMateriasTest {
     Materia algoritmos = new Materia("Algoritmos y Estructura de Datos");
@@ -17,7 +20,7 @@ public class InscripcionMateriasTest {
         Alumno alumno = new Alumno(1234,materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        Assert.assertTrue(inscripcion.aprobada(materiasIncripcion, alumno));
+        assertTrue(inscripcion.aprobada(materiasIncripcion, alumno));
 
     }
     
@@ -30,8 +33,7 @@ public class InscripcionMateriasTest {
         Alumno alumno = new Alumno(1234, materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        Assert.assertFalse(inscripcion.aprobada(materiasIncripcion, alumno));
-
+        assertFalse(inscripcion.aprobada(materiasIncripcion, alumno));
     }
 
 
