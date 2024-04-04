@@ -1,5 +1,8 @@
 
 
+import domain.inscripcion.Alumno;
+import domain.inscripcion.Inscripcion;
+import domain.inscripcion.Materia;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InscripcionMateriasTest {
     Materia algoritmos = new Materia("Algoritmos y Estructura de Datos");
     Materia pdep = new Materia("Paradigmas de Programacion", List.of(algoritmos));
-    Materia am = new Materia("Matematica");
+    Materia am = new Materia("Analisis Matematico I");
 
     @Test
     public void materiasConCorrelativasAprobadas(){
@@ -20,7 +23,7 @@ public class InscripcionMateriasTest {
         Alumno alumno = new Alumno(1234,materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        assertTrue(inscripcion.aprobada(materiasIncripcion, alumno));
+        assertTrue(inscripcion.aprobada());
 
     }
     
@@ -33,7 +36,7 @@ public class InscripcionMateriasTest {
         Alumno alumno = new Alumno(1234, materiasAprobadas);
         Inscripcion inscripcion = new Inscripcion(materiasIncripcion, alumno);
 
-        assertFalse(inscripcion.aprobada(materiasIncripcion, alumno));
+        assertFalse(inscripcion.aprobada());
     }
 
 
